@@ -2,13 +2,21 @@
   padding: 2rem 1rem;
 }
 .gallery__title {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
   text-align: center;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+.gallery__info {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: black;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-top: 2px solid #ccc;
+  padding-top: 0.5rem;
+  font-weight: 400;
 }
 .gallery__grid {
   display: grid;
