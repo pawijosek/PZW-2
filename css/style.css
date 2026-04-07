@@ -20,7 +20,7 @@
 }
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 0.5rem;
 }
 @media (min-width: 768px) {
@@ -43,6 +43,109 @@
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+}
+
+.about {
+  padding: 1rem;
+  background-color: #0d1e2c;
+  color: #FFFFFF;
+  height: calc(100vh - 64px);
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.about__us {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 10% 0;
+}
+.about__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 350;
+}
+.about__text {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.about__history {
+  padding: 5%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.about__history-title {
+  font-size: 1.5rem;
+  font-weight: 350;
+  margin: 0.5rem 0 1rem;
+  letter-spacing: 0.5px;
+}
+.about__history-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.values {
+  padding: 2rem;
+  background-color: #0d1e2c;
+  color: #FFFFFF;
+}
+.values__title {
+  font-size: 1.5rem;
+  font-weight: 350;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.values__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.values__item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  text-align: center;
+}
+.values__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #1B4F72;
+  color: #FFFFFF;
+  font-size: 24px;
+  margin: 0 auto 1rem auto;
+}
+.values__icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #FFFFFF;
+}
+.values__content {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.values__benefit-title {
+  font-size: 1.2rem;
+  font-weight: 350;
+  margin-bottom: 0.5rem;
+}
+.values__benefit-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 * {
