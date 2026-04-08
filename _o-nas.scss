@@ -4,7 +4,6 @@
 	padding: 1rem;
 	background-color: $color-background-dark;
 	color: $color-white;
-	height: calc(100vh - 64px);
 
 	&__container {
 		display: flex;
@@ -15,7 +14,7 @@
 		font-size: 1.2rem;
 		line-height: 1.5;
 		text-align: center;
-		margin: 10% 0;
+		margin: 2rem 0;
 	}
 
 	&__title {
@@ -39,7 +38,7 @@
 
 	&__history-title {
 		font-size: 1.5rem;
-		font-weight: 350;
+		font-weight: 400;
 		margin: 0.5rem 0 1rem;
 		letter-spacing: 0.5px;
 	}
