@@ -1,0 +1,21 @@
+@use 'abstracts/colors' as *;
+
+.contact {
+    padding: 1rem;
+    background-color: $color-white;
+    color: $color-primary;
+
+    &__container {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+}
+

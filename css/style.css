@@ -374,7 +374,7 @@
   align-items: center;
   text-align: center;
   gap: 1rem;
-  background: linear-gradient(135deg, #1a56db, #6366f1);
+  background: linear-gradient(135deg, #1B4F72, #2E86C1);
   padding: 3rem;
   border-radius: 15px;
 }
@@ -415,6 +415,22 @@
   height: 1.25rem;
   flex-shrink: 0;
   color: #FFFFFF;
+}
+
+.contact {
+  padding: 1rem;
+  background-color: #FFFFFF;
+  color: #1B4F72;
+}
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact__header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 * {
