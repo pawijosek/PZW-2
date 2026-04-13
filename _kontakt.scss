@@ -1,21 +1,140 @@
 @use 'abstracts/colors' as *;
 
 .contact {
-    padding: 1rem;
-    background-color: $color-white;
-    color: $color-primary;
+	padding: 1.5rem;
+	background-color: $color-white;
+	color: $color-primary;
 
-    &__container {
+	&__container {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
 	}
 
-    &__header {
+	// HEADER CONTACT
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		padding: 1rem;
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 500;
+		margin: 2rem 0 1rem;
+		text-transform: uppercase;
+		color: $color-primary;
+	}
+
+	&__description {
+		font-size: 1.3rem;
+		line-height: 1.5;
+		color: $color-primary;
+		font-weight: 400;
+	}
+
+	// CONTACT DETAILS
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	&__info-title {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	&__info-item {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+	}
+
+	&__info-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 25%;
+		background-color: rgba($color-primary, 0.6);
+		flex-shrink: 0;
+
+		svg {
+			width: 1.6rem;
+			height: 1.6rem;
+			color: $color-white;
+		}
+	}
+
+	&__info-content {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	&__info-label {
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+
+	&__info-name {
+		font-weight: 400;
+	}
+
+	&__info-phone {
+		color: rgba($color-primary, 0.8);
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+		text-decoration: none;
+	}
+
+	&__info-text {
+		color: $color-primary;
+	}
+
+	&__social {
+		margin-top: 2rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        
+        border:1px solid rgba($color-background-dark, 0.3);
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: rgba($color-primary, 0.1);;
+	}
+
+	&__social-title {
+		font-size: 1.2rem;
+		font-weight: 400;
+		margin-bottom: 1rem;
+	}
+
+	&__social-facebook {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.75rem 1.5rem;
+		background-color: rgba($color-primary, 0.9);
+		border: 1px solid rgba($color-background-dark, 0.3);
+		border-radius: 10px;
+		text-decoration: none;
+		color: $color-white;
+		font-size: 0.95rem;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: $color-white;
+		}
+	}
+
+    &__map {
+        margin: 3rem 0;
     }
 }
-
