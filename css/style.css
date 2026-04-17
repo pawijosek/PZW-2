@@ -74,11 +74,12 @@
   font-size: 1.2rem;
   font-weight: 300;
 }
+.about__img {
+  border-radius: 5px;
+}
 .about__history {
   padding: 5%;
-  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .about__history-title {
   font-size: 1.5rem;
@@ -91,6 +92,10 @@
   line-height: 1.6;
   font-weight: 300;
   letter-spacing: 0.5px;
+}
+.about__img-second {
+  border-radius: 10px;
+  height: 20rem;
 }
 
 .values {
@@ -110,9 +115,7 @@
   gap: 1rem;
 }
 .values__item {
-  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 1rem;
   text-align: center;
 }
@@ -822,7 +825,7 @@ main .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 main .hero .text__overlay {
   color: #FFFFFF;
@@ -874,6 +877,12 @@ main .hero .hero__actions {
     width: 60%;
   }
 }
+@media (min-width: 1280px) {
+  main .hero .hero__actions {
+    flex-direction: row;
+    width: 30%;
+  }
+}
 main .hero .hero__actions a {
   text-decoration: none;
   font-size: 18px;
@@ -895,12 +904,27 @@ main .hero .hero__actions .btn {
 main .hero .hero__actions .btn.btn__primary {
   background: #1B4F72;
   color: white;
-  border: none;
+  border: 3px solid #1B4F72;
+  transition: background 0.3s ease;
+  font-weight: 400;
+}
+@media (min-width: 1280px) {
+  main .hero .hero__actions .btn.btn__primary.btn__primary:hover {
+    background: transparent;
+  }
 }
 main .hero .hero__actions .btn.btn__secondary {
   background-color: transparent;
   color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  border: 2px solid #FFFFFF;
+  font-weight: 400;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+@media (min-width: 1280px) {
+  main .hero .hero__actions .btn.btn__secondary.btn__secondary:hover {
+    background: #FFFFFF;
+    color: black;
+  }
 }
 @keyframes bounce {
   0%, 100% {
@@ -936,12 +960,17 @@ main .stats .stats__container {
   padding: 1.5rem 0.5rem;
   align-items: start;
   background: #FFFFFF;
-  margin: 10% auto;
+  margin: 5% auto;
 }
 @media (min-width: 768px) {
   main .stats .stats__container {
     grid-template-columns: repeat(4, 1fr) !important;
     gap: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .stats .stats__container {
+    max-width: 1740px;
   }
 }
 main .stats .stats__container .stats__item {
@@ -957,8 +986,14 @@ main .stats .stats__container .stats__item .stats__number {
   color: #1B4F72;
   padding: 5px;
 }
+@media (min-width: 1280px) {
+  main .stats .stats__container .stats__item .stats__number {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+}
 main .stats .stats__container .stats__item .stats__label {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: #1B4F72;
   text-transform: uppercase;
@@ -984,6 +1019,11 @@ main .benefits .benefits__text h2 {
   color: #2E86C1;
   margin-bottom: 1rem;
 }
+@media (min-width: 1280px) {
+  main .benefits .benefits__text h2 {
+    font-size: 1.3rem;
+  }
+}
 main .benefits .benefits__text p {
   font-size: 2rem;
   font-weight: 350;
@@ -997,6 +1037,11 @@ main .benefits .benefits__text p {
 @media (min-width: 768px) {
   main .benefits .benefits__text p {
     margin: 0;
+  }
+}
+@media (min-width: 1280px) {
+  main .benefits .benefits__text p {
+    font-size: 2.8rem;
   }
 }
 main .benefits .benefits__container {
@@ -1035,6 +1080,12 @@ main .benefits .benefits__container .benefits__item h3 {
   letter-spacing: 1px;
   margin: 10px 0 5px;
 }
+@media (min-width: 1280px) {
+  main .benefits .benefits__container .benefits__item h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
 main .benefits .benefits__container .benefits__item p {
   font-size: 1rem;
   font-weight: 300;
@@ -1043,6 +1094,12 @@ main .benefits .benefits__container .benefits__item p {
   display: block;
   line-height: 1.5;
   margin: 10px 0 5px;
+}
+@media (min-width: 1280px) {
+  main .benefits .benefits__container .benefits__item p {
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
 }
 main .map__section {
   display: flex;
@@ -1054,9 +1111,19 @@ main .map__section {
   flex-direction: column;
   gap: 2rem;
 }
+@media (min-width: 1280px) {
+  main .map__section {
+    align-items: center;
+  }
+}
 main .map__section .map__header {
   text-align: left;
   width: 100%;
+}
+@media (min-width: 1280px) {
+  main .map__section .map__header {
+    text-align: center;
+  }
 }
 main .map__section .map__header h2 {
   font-size: 18px;
@@ -1066,6 +1133,12 @@ main .map__section .map__header h2 {
   color: #FFFFFF;
   margin-bottom: 1rem;
 }
+@media (min-width: 1280px) {
+  main .map__section .map__header h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
 main .map__section .map__header p {
   font-size: 1rem;
   font-weight: 200;
@@ -1074,11 +1147,23 @@ main .map__section .map__header p {
   display: block;
   line-height: 1.5;
 }
+@media (min-width: 1280px) {
+  main .map__section .map__header p {
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+}
 main .map__section iframe {
   border: none;
   border-radius: 8px;
   height: 300px;
   display: block;
+}
+@media (min-width: 1280px) {
+  main .map__section iframe {
+    max-width: 800px;
+    height: 500px;
+  }
 }
 
 .footer {
@@ -1110,6 +1195,12 @@ main .map__section iframe {
 .footer__logo-img {
   height: 52px;
   width: 52px;
+}
+@media (min-width: 1280px) {
+  .footer__logo-img {
+    height: 100px;
+    width: 100px;
+  }
 }
 .footer__logo-text {
   display: flex;

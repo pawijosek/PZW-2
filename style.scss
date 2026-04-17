@@ -292,7 +292,7 @@ main {
 			content: '';
 			position: absolute;
 			inset: 0;
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
 		}
 
 		.text__overlay {
@@ -344,6 +344,11 @@ main {
 				width: 60%;
 			}
 
+			@include respond(desktop) {
+				flex-direction: row;
+				width: 30%;
+			}
+
 			a {
 				text-decoration: none;
 				font-size: 18px;
@@ -365,13 +370,32 @@ main {
 				&.btn__primary {
 					background: $color-primary;
 					color: white;
-					border: none;
+					border: 3px solid $color-primary;
+					transition: background 0.3s ease;
+					font-weight: 400;
+
+					@include respond(desktop) {
+						&.btn__primary:hover {
+							background: transparent;
+						}
+					}
 				}
 
 				&.btn__secondary {
 					background-color: transparent;
 					color: $color-white;
-					border: 1px solid $color-white;
+					border: 2px solid $color-white;
+					font-weight: 400;
+					transition:
+						background 0.3s ease,
+						color 0.3s ease;
+
+					@include respond(desktop) {
+						&.btn__secondary:hover {
+							background: $color-white;
+							color: black;
+						}
+					}
 				}
 			}
 		}
@@ -415,11 +439,15 @@ main {
 			padding: 1.5rem 0.5rem;
 			align-items: start;
 			background: $color-white;
-			margin: 10% auto;
+			margin: 5% auto;
 
 			@include respond(tablet) {
 				grid-template-columns: repeat(4, 1fr) !important;
 				gap: 1rem;
+			}
+
+			@include respond(desktop) {
+				max-width: 1740px;
 			}
 
 			.stats__item {
@@ -434,13 +462,17 @@ main {
 					font-weight: 500;
 					color: $color-primary;
 					padding: 5px;
+
+					@include respond(desktop) {
+						font-size: 4rem;
+						font-weight: 400;
+					}
 				}
 
 				.stats__label {
-					font-size: 16px;
+					font-size: 1rem;
 					font-weight: 400;
 					color: $color-primary;
-
 					text-transform: uppercase;
 				}
 			}
@@ -466,6 +498,10 @@ main {
 				font-weight: 300;
 				color: $color-secondary;
 				margin-bottom: 1rem;
+
+				@include respond(desktop) {
+					font-size: 1.3rem;
+				}
 			}
 
 			p {
@@ -480,6 +516,10 @@ main {
 
 				@include respond(tablet) {
 					margin: 0;
+				}
+
+				@include respond(desktop) {
+					font-size: 2.8rem;
 				}
 			}
 		}
@@ -522,6 +562,11 @@ main {
 					color: $color-white;
 					letter-spacing: 1px;
 					margin: 10px 0 5px;
+
+					@include respond(desktop) {
+						font-size: 1.6rem;
+						font-weight: 400;
+					}
 				}
 
 				p {
@@ -532,6 +577,11 @@ main {
 					display: block;
 					line-height: 1.5;
 					margin: 10px 0 5px;
+
+					@include respond(desktop) {
+						font-size: 1.2rem;
+						font-weight: 200;
+					}
 				}
 			}
 		}
@@ -547,9 +597,17 @@ main {
 		flex-direction: column;
 		gap: 2rem;
 
+		@include respond(desktop) {
+			align-items: center;
+		}
+
 		.map__header {
 			text-align: left;
 			width: 100%;
+
+			@include respond(desktop) {
+				text-align: center;
+			}
 
 			h2 {
 				font-size: 18px;
@@ -558,6 +616,11 @@ main {
 				font-weight: 400;
 				color: $color-white;
 				margin-bottom: 1rem;
+
+				@include respond(desktop) {
+					font-size: 1.6rem;
+					font-weight: 400;
+				}
 			}
 
 			p {
@@ -567,6 +630,11 @@ main {
 				letter-spacing: 1px;
 				display: block;
 				line-height: 1.5;
+
+				@include respond(desktop) {
+					font-size: 1.2rem;
+					font-weight: 200;
+				}
 			}
 		}
 
@@ -575,6 +643,11 @@ main {
 			border-radius: 8px;
 			height: 300px;
 			display: block;
+
+			@include respond(desktop) {
+				max-width: 800px;
+				height: 500px;
+			}
 		}
 	}
 }
@@ -608,6 +681,11 @@ main {
 		&-img {
 			height: 52px;
 			width: 52px;
+
+			@include respond(desktop) {
+				height: 100px;
+				width: 100px;
+			}
 		}
 
 		&-text {

@@ -29,11 +29,13 @@
 		font-weight: 300;
 	}
 
+	&__img {
+		border-radius: 5px;
+	}
+
 	&__history {
 		padding: 5%;
-		background-color: rgba($color: $color-white, $alpha: 0.1);
 		border-radius: 15px;
-		border: 1px solid rgba($color: $color-white, $alpha: 0.3);
 	}
 
 	&__history-title {
@@ -48,6 +50,11 @@
 		line-height: 1.6;
 		font-weight: 300;
 		letter-spacing: 0.5px;
+	}
+
+	&__img-second {
+		border-radius: 10px;
+		height: 20rem;
 	}
 }
 
@@ -70,9 +77,7 @@
 	}
 
 	&__item {
-		background-color: rgba($color: $color-white, $alpha: 0.1);
 		border-radius: 15px;
-		border: 1px solid rgba($color: $color-white, $alpha: 0.3);
 		padding: 1rem;
 		text-align: center;
 	}
