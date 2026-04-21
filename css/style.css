@@ -750,7 +750,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #FFFFFF;
+  background: #0d1e2c;
   color: #2E86C1;
 }
 
@@ -1159,10 +1159,9 @@ main .stats .stats__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem 1rem;
-  padding: 1.5rem 0.5rem;
+  padding: 4rem;
   align-items: start;
   background: #FFFFFF;
-  margin: 5% auto;
 }
 @media (min-width: 768px) {
   main .stats .stats__container {
@@ -1170,9 +1169,9 @@ main .stats .stats__container {
     gap: 1rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   main .stats .stats__container {
-    max-width: 1740px;
+    padding: 5rem;
   }
 }
 main .stats .stats__container .stats__item {
@@ -1207,6 +1206,12 @@ main .benefits {
 @media (min-width: 768px) {
   main .benefits {
     padding: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .benefits {
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }
 main .benefits .benefits__text {
