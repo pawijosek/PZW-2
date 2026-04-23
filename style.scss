@@ -35,7 +35,7 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	background-color: rgba($color: $color-white, $alpha: 0.95);
+	background-color: rgba($color: $color-white, $alpha: 0.9);
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
 	.header__container {
@@ -47,6 +47,7 @@ header {
 		height: 64px;
 		max-width: 1440px;
 		width: 100%;
+		
 
 		@include respond(tablet) {
 			height: 72px;
@@ -435,22 +436,19 @@ main {
 		.stats__container {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 3.5rem 1rem;
+			gap: 5rem;
 			padding: 4rem;
 			align-items: start;
 			background: $color-white;
-			
 
 			@include respond(tablet) {
 				grid-template-columns: repeat(4, 1fr) !important;
 				gap: 1rem;
 			}
 
-			@include respond(tablet) {
+			@include respond(desktop) {
 				padding: 5rem;
 			}
-
-			
 
 			.stats__item {
 				display: flex;

@@ -81,9 +81,10 @@
   gap: 1rem;
 }
 .about__us {
+  max-width: 1000px;
   line-height: 1.5;
   text-align: center;
-  margin: 2rem 0;
+  margin: 0 auto;
 }
 .about__title {
   font-size: 2rem;
@@ -106,10 +107,6 @@
     font-size: 1.5rem;
   }
 }
-.about__picture {
-  display: flex;
-  justify-content: center;
-}
 .about__img {
   border-radius: 10px;
   width: 100%;
@@ -126,20 +123,40 @@
   }
 }
 .about__history {
-  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 .about__history-title {
   font-size: 1.5rem;
   font-weight: 400;
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0;
   letter-spacing: 0.5px;
+  margin-top: 3rem;
 }
 @media (min-width: 1280px) {
   .about__history-title {
     font-size: 3rem;
+    margin-top: 7rem;
+  }
+}
+.about__history-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+@media (min-width: 1280px) {
+  .about__history-content {
+    flex-direction: row;
+    gap: 1rem;
+    text-align: justify;
   }
 }
 .about__history-text {
+  flex: 1;
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 300;
@@ -150,29 +167,18 @@
     font-size: 2rem;
   }
 }
-.about__picture-second {
-  position: relative;
-  display: block;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.about__picture-second::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(13, 30, 44, 0.4);
-  border-radius: 10px;
-}
-.about__picture-second {
+.about__history-picture {
   display: flex;
+  flex: 1;
   justify-content: center;
 }
-.about__img-second {
-  border-radius: 10px;
+.about__img {
   width: 100%;
+  height: auto;
+  display: block;
 }
 @media (min-width: 1280px) {
-  .about__img-second {
+  .about__img {
     width: 50%;
   }
 }
@@ -768,7 +774,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 header .header__container {
@@ -1158,7 +1164,7 @@ main .hero .scroll__icon svg {
 main .stats .stats__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3.5rem 1rem;
+  gap: 5rem;
   padding: 4rem;
   align-items: start;
   background: #FFFFFF;
@@ -1169,7 +1175,7 @@ main .stats .stats__container {
     gap: 1rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   main .stats .stats__container {
     padding: 5rem;
   }
