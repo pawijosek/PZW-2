@@ -209,3 +209,28 @@
 		}
 	}
 }
+
+// Animation scroll
+.about__title,
+.about__text,
+.about__history,
+.about__history-title,
+.about__history-content,
+.values__title,
+.values__item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.values__item {
+  &:nth-child(1) { transition-delay: 0.1s; }
+  &:nth-child(2) { transition-delay: 0.2s; }
+  &:nth-child(3) { transition-delay: 0.3s; }
+  &:nth-child(4) { transition-delay: 0.4s; }
+}

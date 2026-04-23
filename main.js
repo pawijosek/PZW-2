@@ -43,3 +43,18 @@ function animateNumber(el) {
 		}
 	}, 16)
 }
+
+// Intersection Observer - animacje przy scrollowaniu
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll(
+  '.stats__item, .benefits__item, .map__section, .benefits__text, .about__title, .about__text, .about__history, .about__history-title, .about__history-content, .values__title, .values__item, .membership__text, .membership__documents, .membership__documents-title, .membership__documents-subtitle, .membership__documents-item, .membership__registration-title, .membership__registration-item, .cta__container, .gallery__title, .gallery__info, .gallery__item, .contact__title, .contact__description, .contact__info-title, .contact__info-item'
+).forEach(el => observer.observe(el));
+});
