@@ -186,6 +186,7 @@
   align-items: center;
   text-align: center;
   gap: 3rem;
+  max-width: 1000px;
 }
 @media (min-width: 1280px) {
   .about__history-content {
@@ -203,7 +204,7 @@
 }
 @media (min-width: 1280px) {
   .about__history-text {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 .about__history-picture {
@@ -706,7 +707,7 @@
 @media (min-width: 768px) {
   .contact__description {
     font-size: 2rem;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
   }
 }
@@ -798,7 +799,7 @@
 }
 @media (min-width: 1280px) {
   .contact__info-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 .contact__info-phone {
@@ -814,7 +815,7 @@
 }
 @media (min-width: 1280px) {
   .contact__info-phone {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 }
 .contact__info-text {
@@ -827,7 +828,7 @@
 }
 @media (min-width: 1280px) {
   .contact__info-text {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 }
 .contact__social {

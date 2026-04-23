@@ -83,6 +83,7 @@
 		align-items: center;
 		text-align: center;
 		gap: 3rem;
+		max-width: 1000px;
 
 		@include respond(desktop) {
 			flex-direction: row;
@@ -100,7 +101,7 @@
 		letter-spacing: 0.5px;
 
 		@include respond(desktop) {
-			font-size: 2rem;
+			font-size: 1.6rem;
 		}
 	}
 
